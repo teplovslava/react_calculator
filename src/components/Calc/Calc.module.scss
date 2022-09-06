@@ -1,0 +1,63 @@
+.mainCalc{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    .main{
+        background-color: grey;
+        height: 600px;
+        width: 500px;
+        display:flex;
+        flex-direction:column;
+        border-radius:15px;
+        -webkit-box-shadow: 7px 12px 14px 11px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 7px 12px 14px 11px rgba(0, 0, 0, 0.2);
+        box-shadow: 7px 12px 14px 11px rgba(0, 0, 0, 0.2);
+        .top{
+            height:30%;
+            background-color:black;
+            border-top-left-radius:15px;
+            border-top-right-radius:15px;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            position: relative;
+            &:after{
+                content: "calculator";
+                display: block;
+                position: absolute;
+                color: antiquewhite;
+                font-size: 14px;
+                top: 150px;
+                left: 45px;
+            }
+            &:before{
+                content: "T1000";
+                display: block;
+                position: absolute;
+                color: antiquewhite;
+                font-size: 14px;
+                top: 20px;
+                right: 45px;
+            }
+            .display{
+                background-color:rgb(25, 74, 12);       
+                width:80%;
+                height:40%;   
+                text-align:end; 
+                font-size:65px;
+                padding-right:10px;
+                padding-bottom: 5px;
+                border-radius: 5px;
+                overflow: hidden;
+                
+                
+
+            }
+        }
+    }
+}
