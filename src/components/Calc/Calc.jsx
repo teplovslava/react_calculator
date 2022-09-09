@@ -11,7 +11,7 @@ function Calc() {
     <div className={style.mainCalc}> 
         <div className={style.main}>
             <div className={style.top}>
-                <div className={style.display}>{count}</div>
+                <div className={count.toString().length>7?style.displayLong:style.display}>{count}</div>
             </div>
             <div className={style.bottom}>
               <Bottom 

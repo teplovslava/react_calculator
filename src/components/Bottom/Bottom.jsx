@@ -4,7 +4,7 @@ import style from './Bottom.module.scss'
 function Bottom({count,setCount,fisrtCount,setFisrtCount,secondCount,setSecondCount,sign,setSign}) {
     const [flag,setFlag]=useState(false)
     function toDisp(item){
-        if(item.type==="Number" && count.length < 7 && flag==false){
+        if(item.type==="Number"  && flag==false){
             
             setCount(count + item.val)
             setFisrtCount(count + item.val)
@@ -14,7 +14,7 @@ function Bottom({count,setCount,fisrtCount,setFisrtCount,secondCount,setSecondCo
             setSign(item.val)
             setFlag(true)
 
-        }else if(item.type==="Number" && count.length < 7 && flag==true){
+        }else if(item.type==="Number" && flag==true){
             setCount(count + item.val)
             setSecondCount(count + item.val)
         }
@@ -36,6 +36,7 @@ function Bottom({count,setCount,fisrtCount,setFisrtCount,secondCount,setSecondCo
                 setFisrtCount(Number(fisrtCount) / Number(secondCount));
                 break;
             }
+
             setFlag(false)
         }else if(item.type==="AC"){
             setFisrtCount('')
@@ -142,7 +143,7 @@ function Bottom({count,setCount,fisrtCount,setFisrtCount,secondCount,setSecondCo
   return (
     <div className={style.Clava}>
         {arr.map(item=>
-        (<div 
+        (<div key={item.val} 
             className={item.class==='grey'
             ?style.grey:item.class==='orange'
             ?style.orange:style.black}
